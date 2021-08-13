@@ -11,6 +11,9 @@ def list(directory):
 
 def read(directory, filename):
     with open(directory + filename) as read:
+        print(f"\nReading from {filename}...\n")
+        for data in read:
+            print(data)
         pass
 
 if sel == "1":
@@ -24,3 +27,6 @@ if sel == "1":
 
     if opt == "1":
         list(cDir)
+    elif opt =="2":
+        name = input("Enter file name: ")
+        read(cDir, name)
