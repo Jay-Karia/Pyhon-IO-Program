@@ -9,8 +9,9 @@ def list(directory):
     for items in li:
         print(items)
 
-def read(directory):
-    pass
+def read(directory, filename):
+    with open(directory + filename) as read:
+        pass
 
 if sel == "1":
     print("\nSelected 1) Custom Directory\n")
