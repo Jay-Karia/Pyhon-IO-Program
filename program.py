@@ -9,6 +9,9 @@ def list(directory):
     for items in li:
         print(items)
 
+def read(directory):
+    pass
+
 if sel == "1":
     print("\nSelected 1) Custom Directory\n")
     str = "Enter you Directory: "
