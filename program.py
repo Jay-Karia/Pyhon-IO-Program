@@ -10,11 +10,10 @@ def list(directory):
         print(items)
 
 def read(directory, filename):
-    with open(directory + filename) as read:
+    with open(directory + filename, "w") as read:
         print(f"\nReading from {filename}...\n")
         for data in read:
             print(data)
-        pass
 
 if sel == "1":
     print("\nSelected 1) Custom Directory\n")
@@ -22,11 +21,15 @@ if sel == "1":
     dir = input(str)
     cDir = dir+"\\"
     print(f"Directory is set to: " + cDir)
+else:
+    print("Selected 2) Default Directory\n1")
+    cDir = os.getcwd() + "\\"
+    print(f"Directory is set to: " + cDir)
     
-    opt = input("\nEnter what do you want do:\n1) List the items in the Directory\n2) Read a file\n3) Write into a file\n4) Append to a file\n5) Create a new file\n6) Delete a File\n")
+opt = input("\nEnter what do you want do:\n1) List the items in the Directory\n2) Read a file\n3) Write into a file\n4) Append to a file\n5) Create a new file\n6) Delete a File\n")
 
-    if opt == "1":
-        list(cDir)
-    elif opt =="2":
-        name = input("Enter file name: ")
-        read(cDir, name)
+if opt == "1":
+    list(cDir)
+elif opt == "2":
+    name = input("Enter file name: ")
+    read(cDir, name)
