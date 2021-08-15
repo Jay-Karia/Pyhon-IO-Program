@@ -25,8 +25,7 @@ def writeToAFile(directory, filename):
         w = ""
         while w != "X":
             w = input()
-            wr = w.replace("W", "")
-            writing.write(wr)
+            writing.write(("\n" + w.replace("X", " ")))
         print("\nWriting Finished To a File!")
 
 
@@ -37,7 +36,7 @@ if sel == "1":
     cDir = dir + "\\"
     print(f"Directory is set to: " + cDir)
 else:
-    print("Selected 2) Default Directory\n1")
+    print("Selected 2) Default Directory\n")
     cDir = os.getcwd() + "\\"
     print(f"Directory is set to: " + cDir)
 
