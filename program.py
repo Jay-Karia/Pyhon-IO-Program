@@ -15,8 +15,7 @@ def list(directory):
 def read(directory, filename):
     with open(directory + filename) as reading:
         print(f"\nReading from {filename}...\n")
-        for data in reading:
-            print(data)
+        print(reading.read())
         print("\nReading Finished from a File!")
 
 def writeToAFile(directory, filename):
@@ -30,6 +29,17 @@ def writeToAFile(directory, filename):
             writing.write(("\n" + w.replace("X", " ")))
         print("\nWriting Finished To a File!")
 
+def appendToAFile(directory, filename):
+    # Read from a File
+    read(directory, filename)
+    # Append to a File
+    with open((directory + filename), "a") as appender:
+        print("Enter \'X\' to stop writing...")
+        a = ""
+        while a != "X":
+            a = input()
+            appender.write(("\n" + a.replace("X", " ")))
+        print("Appending Finished To a File!")
 
 if sel == "1":
     print("\nSelected 1) Custom Directory\n")
@@ -53,3 +63,6 @@ elif opt == "2":
 elif opt == "3":
     name = input("Enter file name: ")
     writeToAFile(cDir, name)
+elif opt == "4":
+    name = input("Enter file name: ")
+    appendToAFile(cDir, name)
