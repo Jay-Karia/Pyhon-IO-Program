@@ -23,6 +23,8 @@ def writeToAFile(directory, filename):
     with open((directory + filename), "w") as writing:
         print("Enter \'X\' to stop writing...")
         w = ""
+        w = input()
+        writing.write(w.replace("X", " "))
         while w != "X":
             w = input()
             writing.write(("\n" + w.replace("X", " ")))
