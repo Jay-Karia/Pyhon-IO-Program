@@ -1,4 +1,4 @@
-# Pyhon IO Program
+# Python IO Program
 - This is a Python Program where the user can read or write into any files present in their respective Computer
 - Function Available for Input and Output (IO) in the program:
 - - List the file name in the given directory
