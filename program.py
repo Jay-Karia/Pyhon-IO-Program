@@ -58,7 +58,7 @@ else:
     print(f"Directory is set to: " + cDir)
 
 opt = input(
-    "\nEnter what do you want do:\n1) List the items in the Directory\n2) Read a file\n3) Write into a file\n4) Append to a file\n5) Create a new directory\n6) Create new directories\n")
+    "\nEnter what do you want do:\n1) List the items in the Directory\n2) Read a file\n3) Write into a file\n4) Append to a file\n5) Create a new directory\n6) Create new directories\nlol")
 
 if opt == "1":
     list(cDir)
