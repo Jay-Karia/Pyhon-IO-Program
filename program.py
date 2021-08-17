@@ -41,6 +41,11 @@ def appendToAFile(directory, filename):
             appender.write(("\n" + a.replace("X", " ")))
         print("Appending Finished To a File!")
 
+def newDir(directory):
+    dir = input(f"Enter the name of the folder at {directory}")
+    os.mkdir(directory + dir)
+    print("Directory Created Successfully!")
+
 if sel == "1":
     print("\nSelected 1) Custom Directory\n")
     str = "Enter you Directory: "
@@ -53,7 +58,7 @@ else:
     print(f"Directory is set to: " + cDir)
 
 opt = input(
-    "\nEnter what do you want do:\n1) List the items in the Directory\n2) Read a file\n3) Write into a file\n4) Append to a file\n5) Create a new file\n6) Delete a File\n")
+    "\nEnter what do you want do:\n1) List the items in the Directory\n2) Read a file\n3) Write into a file\n4) Append to a file\n5) Create a new directory\n6) Create new directories\n")
 
 if opt == "1":
     list(cDir)
@@ -66,3 +71,5 @@ elif opt == "3":
 elif opt == "4":
     name = input("Enter file name: ")
     appendToAFile(cDir, name)
+elif opt == "5":
+    newDir(cDir)
