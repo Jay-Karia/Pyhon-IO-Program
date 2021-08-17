@@ -7,4 +7,3 @@
 - - Append into a file
 - - Create a new file
 - - Delete a file
-- Note: This Program is not completed yet.
